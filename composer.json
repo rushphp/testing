@@ -1,0 +1,55 @@
+{
+    "name": "rushphp/testing",
+    "description": "Testing kit for RUSH tools: fixtures, harness and contract conformance.",
+    "type": "library",
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "RUSHphp",
+            "homepage": "https://github.com/rushphp"
+        }
+    ],
+    "keywords": [
+        "rush",
+        "cli",
+        "testing",
+        "fixtures",
+        "conformance",
+        "automation"
+    ],
+    "support": {
+        "issues": "https://github.com/rushphp/testing/issues",
+        "source": "https://github.com/rushphp/testing"
+    },
+    "autoload": {
+        "psr-4": {
+            "Rush\\Testing\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "php": "^8.3",
+        "rushphp/contract": "^0.2.0",
+        "rushphp/support": "^0.2.0",
+        "rushphp/rush": "^0.2.0"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^2.2",
+        "pestphp/pest": "^3.8"
+    },
+    "scripts": {
+        "stan": "@php vendor/bin/phpstan analyse -c phpstan.neon",
+        "test": "pest"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}
